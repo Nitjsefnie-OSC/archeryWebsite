@@ -21,6 +21,18 @@ on:
         description: 'Git branch, tag, or 40-character commit SHA to validate'
         required: true
         type: string
+      browser:
+        description: Optional manual browser suite
+        required: false
+        type: choice
+        default: chromium
+        options: [chromium, firefox, webkit]
+      mode:
+        description: Lifecycle scoring execution mode
+        required: false
+        type: choice
+        default: hybrid
+        options: [hybrid, full-ui]
 
 permissions:
   contents: read
